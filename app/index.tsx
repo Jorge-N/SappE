@@ -7,5 +7,4 @@ export default function Index() {
       <Counter></Counter>
     </View>
   );
-
 }

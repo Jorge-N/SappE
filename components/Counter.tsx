@@ -1,6 +1,5 @@
 import { View, Text, Pressable, StyleSheet } from 'react-native'
 import React, {useState} from 'react'
-import { red } from 'react-native-reanimated/lib/typescript/reanimated2/Colors'
 
 function initial(){ //Esto lo hice para probar cómo funciona useState (con esta forma de setear el contador inicialmente, react no llama a useState cada vez que renderiza la app, solamente cuando refresca)
     console.log("hola")
@@ -19,23 +18,23 @@ const Counter = () => {
     }
 
   return (
-    <View style={styles.viewStyle}>
-        <Pressable style={styles.pressableStyle} onPress={decrementar}><Text style={styles.text}>-</Text></Pressable>
-        <Text style={styles.text}>{counter}</Text>
-        <Pressable style={styles.pressableStyle} onPress={incrementar}><Text style={styles.text}>+</Text></Pressable>
+    <View style={styles.viewStyles}>
+        <Pressable style={styles.pressableStyles} onPress={decrementar}><Text style={styles.textStyles}>-</Text></Pressable>
+        <Text style={styles.textStyles}>{counter}</Text>
+        <Pressable style={styles.pressableStyles} onPress={incrementar}><Text style={styles.textStyles}>+</Text></Pressable>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-    viewStyle: {
+    viewStyles: {
         display: 'flex',
         flexDirection: 'row',
         width: 300,
         justifyContent: 'space-between',
         alignItems: 'center',
     },
-    text: {
+    textStyles: {
         fontSize: 75,
         fontFamily: 'sans-serif',
         color: 'black',
@@ -46,7 +45,7 @@ const styles = StyleSheet.create({
         textShadowRadius: 1
     },
 
-    pressableStyle: {
+    pressableStyles: {
         width: 90,
         height: 90,
         userSelect: 'none',
