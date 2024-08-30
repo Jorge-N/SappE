@@ -16,7 +16,7 @@ const Card = (props : CardProps) => {
 
   return (
     <Pressable onPress={press} style={pressed ? styles.pressedStyles : styles.notPressedStyles}>
-        <Text style={pressed ? {textAlign: 'center', color: 'white'} : {textAlign: 'center', color: 'white'}}>{props.title}</Text>
+        <Text style={{textAlign: 'center', color: 'white'}}>{props.title}</Text>
     </Pressable>
   )
 }
