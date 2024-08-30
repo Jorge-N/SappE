@@ -15,8 +15,8 @@ const Card = (props : CardProps) => {
   }
 
   return (
-    <Pressable onPress={press} style={pressed ? styles.pressedStyle : styles.notPressedStyle}>
-        <Text style={pressed ? styles.pressedText : {color: 'black'}}>{props.title}</Text>
+    <Pressable onPress={press} style={pressed ? styles.pressedStyles : styles.notPressedStyles}>
+        <Text style={pressed ? {textAlign: 'center', color: 'white'} : {textAlign: 'center', color: 'white'}}>{props.title}</Text>
     </Pressable>
   )
 }
@@ -24,18 +24,19 @@ const Card = (props : CardProps) => {
 export default Card
 
 const styles = StyleSheet.create({
-  pressedStyle:
+  pressedStyles:
   {
-    backgroundColor: 'blue'
+    width: '100%',
+    margin: 10,
+    padding: 40,
+    backgroundColor: '#1D3D47'
   },
 
-  notPressedStyle:
+  notPressedStyles:
   {
-    backgroundColor: 'grey'
-  },
-
-  pressedText:
-  {
-    color: 'white'
+    width: '100%',
+    padding: 40,
+    margin: 10,
+    backgroundColor: '#808080'
   }
 })
