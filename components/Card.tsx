@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 type CardProps = 
 {
   title: string
-  key: number
 }
 
 const Card = (props : CardProps) => {
