@@ -17,11 +17,11 @@ export default function Index() {
 
 const styles = StyleSheet.create({
   viewStyles: {
-      display: 'flex',
-      width: '100%',
-      height: '100%',
-      padding: 40,
-      justifyContent: 'center',
-      alignItems: 'center',
+    display: 'flex',
+    width: '100%',
+    height: '100%',
+    padding: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 })
