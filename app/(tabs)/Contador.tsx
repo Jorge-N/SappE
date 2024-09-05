@@ -4,7 +4,7 @@ import Counter from '@/components/Counter'
 
 const Contador = () => {
   return (
-    <View>
+    <View style = {{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%'}}>
       <Counter>
       </Counter>
     </View>

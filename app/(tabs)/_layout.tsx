@@ -28,7 +28,16 @@ export default function TabLayout() {
         options={{
           title: 'Contador',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'umbrella' : 'umbrella-outline'} color={color} />
+            <TabBarIcon name={focused ? 'skull' : 'skull-outline'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="Perfil"
+        options={{
+          title: 'Perfil',
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'cafe' : 'cafe-outline'} color={color} />
           ),
         }}
       />
