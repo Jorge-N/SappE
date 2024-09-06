@@ -1,6 +1,7 @@
 import { Stack, Tabs } from 'expo-router';
 import React from 'react';
 
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
@@ -15,16 +16,16 @@ export default function TabLayout() {
         headerShown: false,
       }}>
       <Tabs.Screen
-        name="index"
+        name="cards"
         options={{
-          title: 'Home',
+          title: 'Tarjeticas',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+            <MaterialCommunityIcons name={focused ? "cards-playing-diamond-multiple" : "cards-playing-diamond-multiple-outline"} size={24} color="black"/>
           ),
         }}
       />
       <Tabs.Screen
-        name="Contador"
+        name="contador"
         options={{
           title: 'Contador',
           tabBarIcon: ({ color, focused }) => (
@@ -33,7 +34,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="Perfil"
+        name="perfil"
         options={{
           title: 'Perfil',
           tabBarIcon: ({ color, focused }) => (
