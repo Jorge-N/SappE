@@ -4,12 +4,10 @@ import Profile from '@/components/Profile'
 
 const Perfil = () => {
   return (
-    <View>
-      <Profile name={"Jorge"}></Profile>
+    <View style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', gap: 15}}>
+      <Profile></Profile>
     </View>
   )
 }
 
 export default Perfil
-
-const styles = StyleSheet.create({})
