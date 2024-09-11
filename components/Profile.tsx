@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Pressable, Modal } from 'react-native'
 import React, { useState } from 'react'
-import { TextInput } from 'react-native-gesture-handler'
+import { TextInput } from 'react-native'
 
 const Profile = () => {
     const [visible, setVisible] = useState(false)
@@ -86,7 +86,6 @@ const styles = StyleSheet.create({
 
   pressableTextStyle: {
     display: 'flex', 
-    width: 'fit-content', 
     padding: 10, 
     backgroundColor: '#1D3D47', 
     borderRadius: 20, 
