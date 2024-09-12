@@ -1,6 +1,5 @@
 import { Stack, Tabs } from 'expo-router';
 import React from 'react';
-
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
@@ -15,6 +14,12 @@ export default function TabLayout() {
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
       }}>
+      <Tabs.Screen
+      name="index"
+      options={{
+        href: null,
+      }}
+      />
       <Tabs.Screen
         name="cards"
         options={{
