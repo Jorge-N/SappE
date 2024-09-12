@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Pressable, Modal } from 'react-native'
 import React, { useState } from 'react'
 import { TextInput } from 'react-native'
+import { AntDesign, Entypo } from '@expo/vector-icons';
 
 const Profile = () => {
     const [visible, setVisible] = useState(false)
@@ -19,8 +20,17 @@ const Profile = () => {
         transparent={true}
       >
         <View style={styles.modalCenter}>
+          <View style={{width: 500, padding: 20, top: 62, zIndex: 100}}> {/**Muy hardcodeado pero bueno */}
+            <Pressable 
+              onPress={() => {
+                setVisible(!visible)
+              }}
+              >
+                <Entypo style={{display: 'flex', justifyContent: 'flex-end'}} name="cross" size={18} color="grey" />
+            </Pressable>
+        </View>
           <View style={styles.modalView}>
-            
+
             <Text style={{fontSize: 30,}}>Cambiar Nombre</Text>
 
             <TextInput 
@@ -31,7 +41,7 @@ const Profile = () => {
               onChangeText={(text) => setNameOnChange(text)}
               value = {nameOnChange}
             />
-            
+
             <Pressable 
               onPress={() => {
                 setVisible(!visible)
@@ -63,6 +73,7 @@ const styles = StyleSheet.create({
   },
 
   modalView: {
+    display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 20,
@@ -90,6 +101,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#1D3D47', 
     borderRadius: 20, 
     color: 'white'
+  },
+
+  pressableExitSyle: {
+    display: 'flex'
   }
 
 })
