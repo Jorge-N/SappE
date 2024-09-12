@@ -5,7 +5,7 @@ import Profile from '@/components/Profile'
 const Perfil = () => {
   return (
     <View style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', gap: 15}}>
-      <Profile></Profile>
+      <Profile/>
     </View>
   )
 }

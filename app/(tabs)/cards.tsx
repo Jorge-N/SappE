@@ -8,13 +8,11 @@ const cards = [
 
 export default function Index() {
   return (
-    <GestureHandlerRootView>
-      <View style={styles.viewStyles}>
-        {cards.map((cardTitle, index) => (
-          <Card title={cardTitle} key={index}></Card>
-        ))}
-      </View>
-    </GestureHandlerRootView>
+    <View style={styles.viewStyles}>
+      {cards.map((cardTitle, index) => (
+        <Card title={cardTitle} key={index}/>
+      ))}
+    </View>
   );
 }
 

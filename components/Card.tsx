@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
     width: '100%',
     margin: 10,
     padding: 40,
-    backgroundColor: '#1D3D47'
+    backgroundColor: '#1D3D47',
+    userSelect: 'none'
   },
 
   notPressedStyles:
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
     width: '100%',
     padding: 40,
     margin: 10,
-    backgroundColor: '#808080'
+    backgroundColor: '#808080',
+    userSelect: 'none'
   }
 })
