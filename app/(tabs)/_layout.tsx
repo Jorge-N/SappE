@@ -25,7 +25,7 @@ export default function TabLayout() {
         options={{
           title: 'Tarjeticas',
           tabBarIcon: ({ color, focused }) => (
-            <MaterialCommunityIcons name={focused ? "cards-playing-diamond-multiple" : "cards-playing-diamond-multiple-outline"} size={24} color="black"/>
+            <MaterialCommunityIcons name={focused ? "cards-playing-diamond-multiple" : "cards-playing-diamond-multiple-outline"} size={24} color={color}/>
           ),
         }}
       />
@@ -44,6 +44,15 @@ export default function TabLayout() {
           title: 'Perfil',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'cafe' : 'cafe-outline'} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="flashcards"
+        options={{
+          title: 'Flashcards',
+          tabBarIcon: ({ color, focused }) => (
+            <MaterialCommunityIcons name={focused ? 'cards' : 'cards-outline'} size={24} color={color} />
           ),
         }}
       />

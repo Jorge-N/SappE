@@ -1,4 +1,4 @@
-import { View, Text, Pressable, StyleSheet } from 'react-native'
+import { View, Text, Pressable, StyleSheet, Modal } from 'react-native'
 import React, {useState} from 'react'
 
 function initial(){ //Esto lo hice para probar cómo funciona useState (con esta forma de setear el contador inicialmente, react no llama a useState cada vez que renderiza la app, solamente cuando refresca)
@@ -7,10 +7,18 @@ function initial(){ //Esto lo hice para probar cómo funciona useState (con esta
 }
 
 const Counter = () => {
-    const [counter, setCounter] = useState(0)
-    
+    const [counter, setCounter] = useState(999)
+    const [visible, setVisible] = useState(false)
+    const [first, setFirst] = useState(true)    
+   
+    const showModal = () => {
+        setFirst(prev => prev = false)
+        setVisible(prev => !prev) 
+    }
+
     const incrementar = () => {
         setCounter(prev => prev + 1)
+        counter == 999 && first ? showModal() : undefined
     }
 
     const decrementar = () => {
@@ -19,6 +27,14 @@ const Counter = () => {
 
   return (
     <View style={styles.viewStyles}>
+        <Modal visible={visible} transparent={true}>
+            <View style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100%',}}>
+                <View style={{display: 'flex', justifyContent: 'center', alignItems: 'center', width: 500, height: 200, backgroundColor: 'white', borderRadius: 10}}>
+                    <Text style={{fontSize: 24, margin: 20}}>¡Felicitaciones, tenés mucho tiempo libre!</Text>
+                    <Pressable onPress={showModal}><Text>Cerrar</Text></Pressable>
+                </View>
+            </View>
+        </Modal>
         <Pressable style={styles.pressableStyles} onPress={decrementar}><Text style={styles.textStyles}>-</Text></Pressable>
         <Text style={styles.textStyles}>{counter}</Text>
         <Pressable style={styles.pressableStyles} onPress={incrementar}><Text style={styles.textStyles}>+</Text></Pressable>
