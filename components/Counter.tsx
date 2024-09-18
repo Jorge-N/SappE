@@ -1,5 +1,6 @@
 import { View, Text, Pressable, StyleSheet, Modal } from 'react-native'
 import React, {useState} from 'react'
+import { useTheme } from '@react-navigation/native'
 
 function initial(){ //Esto lo hice para probar cómo funciona useState (con esta forma de setear el contador inicialmente, react no llama a useState cada vez que renderiza la app, solamente cuando refresca)
     console.log("hola")
@@ -7,10 +8,10 @@ function initial(){ //Esto lo hice para probar cómo funciona useState (con esta
 }
 
 const Counter = () => {
-    const [counter, setCounter] = useState(999)
+    const [counter, setCounter] = useState(0)
     const [visible, setVisible] = useState(false)
-    const [first, setFirst] = useState(true)    
-   
+    const [first, setFirst] = useState(true)
+
     const showModal = () => {
         setFirst(prev => prev = false)
         setVisible(prev => !prev) 
@@ -24,7 +25,7 @@ const Counter = () => {
     const decrementar = () => {
         setCounter(prev => prev -1)
     }
-
+    
   return (
     <View style={styles.viewStyles}>
         <Modal visible={visible} transparent={true}>
